@@ -38,14 +38,17 @@ left: 44%; top: 4%; cursor: pointer;}
         0 0 25px rgba(150,70,255,0.8);
 }
 
-.Nombre{ /*ESTE ES LA PREGUNTA DEBAJO DEL NOMBRE*/
-    font-family: 'Press Start 2P', cursive; text-align: center;
-    font-size: 5.9vw;
+.Nombre {
+    font-family: 'Press Start 2P', cursive;
     text-align: center;
-    position: relative;
-    top: 0%;
-    padding-bottom: 0%;
-
+    font-size: clamp(28px, 4vw, 64px);
+    line-height: 1.3;
+    margin: 0;
+    padding: 0 20px;
+    max-width: 1200px;
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.9),
+        0 0 30px rgba(120,60,255,0.8);
 }
 
 .Boton {width: 20vw; height: 4vw; background: rgb(144, 90, 196); /*Este es el boton de JUGAR*/
