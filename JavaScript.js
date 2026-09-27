@@ -131,9 +131,9 @@ function JUEGO(){
                     html: '¡Lo lograste! Has protegido la Tierra y superado este nivel. Prepárate para el siguiente desafío.',
                     icon: 'sucess',
                     confirmButtonText: 'QUIERO CONTINUAR',
-                    width: '50%',
+                    width: '42%',
                     height: '80%',
-                    timer: 100000,
+                    timer: 12000,
                     
                     
                     timerProgressbar: true,
