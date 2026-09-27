@@ -12,7 +12,7 @@ function JUEGOlvl3() {
         Tiempolvl3--;
         document.getElementById("Tiempolvl3").innerHTML = Tiempolvl3
         if (Tiempolvl3 == 0) {
-            Tiempolvl3 = 51
+            Tiempolvl3 = 60
             Puntajelvl3 = 0
             alert("Lo lamento perdiste")
         }
