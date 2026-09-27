@@ -110,7 +110,8 @@ function JUEGO(){
                 document.getElementById("Fondo_Ciberpunk").pause()
                 document.getElementById("Puntos_sound").pause()
                 document.getElementById("Punto2").pause()
-                document.getElementById("GANASTE_PANTALLA").style.display = "flex"
+                document.getElementById("GANASTE_PANTALLA").style.display = "flex";
+                document.getElementById("GANASTE_PANTALLA").style.opacity = "1";
                 
                 function Ganaste_Pantalla(){
 
