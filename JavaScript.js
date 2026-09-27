@@ -78,7 +78,7 @@ function JUEGO(){
         Tiempo--;
         document.getElementById("Tiempo").innerHTML = Tiempo
         if(Tiempo == 0){
-            Tiempo = 71
+            Tiempo = 70
             Puntaje = 0
             document.getElementById("Perdiste_sound").play()
             alert("Lo lamento perdiste")} }
@@ -97,7 +97,7 @@ function JUEGO(){
             document.getElementById("Puntaje").innerHTML = Puntaje + "&nbsp;/&nbsp;30"
             if(Puntaje == 30){
                 Puntaje = 0 
-                Tiempo = 71
+                Tiempo = 70
 
 
                 document.getElementById("NEXT").addEventListener('click', Habilitar_Siguienten_LVL)
