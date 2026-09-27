@@ -96,7 +96,7 @@ function JUEGO(){
             Puntaje++;
             document.getElementById("Puntaje").innerHTML = Puntaje + "&nbsp;/&nbsp;30"
             if(Puntaje == 30){
-                Puntaje = 0 
+                Puntaje = 0
                 Tiempo = 70
 
 
