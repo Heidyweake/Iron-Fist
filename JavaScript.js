@@ -128,7 +128,7 @@ function JUEGO(){
 
                 Swal.fire({
                     title : 'FELICIDADES POR SUPERAR <br> EL NIVEL <br><br> <img src="IMG/Check.png" width = "120px"><br>',
-                    html: 'Al parecer nos salvamos, agradecemos tu ayuda y ezfuerzo al superar este nivel, esperamos seguir contando contigo, si algo mas sucede y por cierto, no olvides que te esperan grandes cosas al final del juego asi que no pares de intentar ',
+                    html: '¡Lo lograste! Has protegido la Tierra y superado este nivel. Prepárate para el siguiente desafío.',
                     icon: 'sucess',
                     confirmButtonText: 'QUIERO CONTINUAR',
                     width: '50%',
