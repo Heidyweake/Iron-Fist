@@ -32,7 +32,7 @@ function JUEGOlvl3() {
         document.getElementById("Puntajelvl3").innerHTML = Puntajelvl3 + " / 4"
         if (Puntajelvl3 == 4) {
             Puntajelvl3 = 0
-            Tiempolvl3 = 51
+            Tiempolvl3 = 60
             function Contactos(){
             Swal.fire({
                 title : 'Felicitaciones por parte del <br> Grupo Omega<br><br><img src="IMG/Logo_Omega.png" width = "120px">',
