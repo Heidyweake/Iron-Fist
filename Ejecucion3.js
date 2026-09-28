@@ -20,10 +20,10 @@ function JUEGOlvl3() {
     Restar_Tiempolvl3 = setInterval(Tiempo_Disminurlvl3, 1000)
 
     //AÑADIMOS LA FUNCION AUMENTAR PUNTOS AL PASAR EL CURSOR SOBRE LOS METEORITOS
-    document.getElementById("Meteoritolvl3").addEventListener('mouseover', Aumentar_Puntoslvl3)
-    document.getElementById("Meteorito2lvl3").addEventListener('mouseover', Aumentar_Puntoslvl3)
-    document.getElementById("Meteorito3lvl3").addEventListener('mouseover', Aumentar_Puntoslvl3)
-    document.getElementById("Meteorito4lvl3").addEventListener('mouseover', Aumentar_Puntoslvl3)
+    document.getElementById("Meteoritolvl3").addEventListener('pointerenter', Aumentar_Puntoslvl3)
+    document.getElementById("Meteorito2lvl3").addEventListener('pointerenter', Aumentar_Puntoslvl3)
+    document.getElementById("Meteorito3lvl3").addEventListener('pointerenter', Aumentar_Puntoslvl3)
+    document.getElementById("Meteorito4lvl3").addEventListener('pointerenter', Aumentar_Puntoslvl3)
 
 
     //FUNCION QUE UNICAMENTE AUMENTA PUNTOS Y RESETEA LAS VARIABLES AL LLEGAR A CIERTO LIMITE
