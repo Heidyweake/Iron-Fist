@@ -87,8 +87,8 @@ function JUEGO(){
         Restar_Tiempo = setInterval(Tiempo_Disminur, 1000)
 
         //AÑADIMOS LA FUNCION AUMENTAR PUNTOS AL PASAR EL CURSOR SOBRE LOS METIORITOS
-        document.getElementById("Meteiorito").addEventListener('mouseover', Aumentar_Puntos)
-        document.getElementById("Meteiorito2").addEventListener('mouseover', Aumentar_Puntos)
+        document.getElementById("Meteiorito").addEventListener('pointerenter', Aumentar_Puntos)
+        document.getElementById("Meteiorito2").addEventListener('pointerenter', Aumentar_Puntos)
 
 
         //FUNCION QUE UNICAMENTE AUMENTA PUNTOS Y RESETEA LAS VARIABLES AL LLEGAR A CIERTO LIMITE
