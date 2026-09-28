@@ -1,4 +1,11 @@
-html body{margin: 0; padding: 0; font-family: sans-serif;}/*RESTABLESCO LA PAGINA, SI MARGEN EN LOS BORDES*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
 
 
 #Fondo {background-image: url(IMG/Fondo_Espacio.gif) ; color: white; background-attachment: fixed; background-repeat: no-repeat;
@@ -137,7 +144,17 @@ margin-left: auto; margin-right: auto; margin: auto; margin-top: -3%; }
     font-family: 'Inconsolata', monospace;
 }
 
+#btnNarracion {
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+}
 
+#btnContinuar {
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+}
 
 /*SEGUNDA SECCION------------------------------------------------------------------------------------------------------*/
 
@@ -191,16 +208,36 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
 }
 
 /*FONDO DE LA SECCION PRINCIPAL*/
-.Seccion_Juego {width: 100%; height: 160vh; 
-    background-size: cover; display: flex;
-    align-items: center; justify-content: center;
-    flex-direction: column; position: absolute; top: -12%; left: -100%;  transition: 2s;       }
+.Seccion_Juego {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 2s;
+    overflow: hidden;
+}
     
     /*ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO*/
-    .Contenedor {width: 900px; height: 500px; 
-    border: 5px dashed purple; 
-    background: url(IMG/Fondo.jpg) no-repeat 50% 50%; 
-    background-size: cover; position: relative; top: 4%; overflow: hidden;  }
+    .Contenedor {
+    width: 90vw;
+    max-width: 900px;
+    height: 55vh;
+    max-height: 500px;
+    min-height: 300px;
+    border: 5px dashed purple;
+    background: url(IMG/Fondo.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    top: 4%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
 
     /*CABEZARA DENTRO DEL JUEGO*/
     .Cabezera {height: 70px; 
@@ -323,8 +360,22 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
      display: table-cell; vertical-align: middle;
       font-family: 'Press Start 2P', cursive;}
 
-.NEXT {width: 15vw; height: 3vw; background: rgb(0, 132, 255); font-size: 0.9vw; display: flex; align-items: center; justify-content: center; cursor: pointer; float: right;
-margin-left: 12%; }
+.NEXT {
+    width: 15vw;
+    height: 3vw;
+    background: rgb(0, 132, 255);
+    font-size: 0.9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+
+    z-index: 10000;
+}
 
 .Contenedor_LVL {
     position: relative;
@@ -415,10 +466,20 @@ margin-left: 12%; }
 
     
     /*ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO*/
-    .Contenedorlvl2 {width: 900px; height: 500px; 
-    border: 5px dashed rgb(46, 86, 218); 
+    .Contenedorlvl2 {
+    width: 90vw;
+    max-width: 900px;
+    height: 55vh;
+    max-height: 500px;
+    min-height: 300px;
+    border: 5px dashed rgb(46, 86, 218);
     background: url(IMG/Fondo.jpg) no-repeat 50% 50%;
-    background-size: cover; position: relative; top: 4%; overflow: hidden;}
+    background-size: cover;
+    position: relative;
+    top: 4%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
     
     /*Pantalla start del inicio del juego*/
     .Startlvl2 {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.582);
@@ -552,14 +613,18 @@ margin-left: 12%; }
     
     /*ESTILOS DENTRO DEL CONTENEDOR DEL JUEGO*/
     .Contenedorlvl3 {
-        width: 900px;
-        height: 500px; 
-        border: 5px dashed red; 
-        background: url(IMG/Fondo.jpg) no-repeat 50% 50% ;
-        background-size: cover;
-        position: relative;
-        top: 4%;
-        overflow: hidden;
+    width: 90vw;
+    max-width: 900px;
+    height: 55vh;
+    max-height: 500px;
+    min-height: 300px;
+    border: 5px dashed red;
+    background: url(IMG/Fondo.jpg) no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    top: 4%;
+    overflow: hidden;
+    box-sizing: border-box;
     }
     
     /*Pantalla start del inicio del juego*/

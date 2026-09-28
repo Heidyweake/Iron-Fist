@@ -94,9 +94,9 @@ function JUEGOlvl3() {
             function Creditoslvl3() {
                 document.getElementById("Pantalla_creditoslvl3").style.background = "black"
                 document.getElementById("Creditoslvl3").style.top = "-15%"
-                document.getElementById("Creditoslvl3").style.transition = "10s"
+                document.getElementById("Creditoslvl3").style.transition = "3s"
                 document.getElementById("Proximolvl3").style.bottom = "-34%"
-                document.getElementById("Proximolvl3").style.transition = "15s"
+                document.getElementById("Proximolvl3").style.transition = "2s"
             }
             setTimeout(Creditoslvl3, 5000)
         }

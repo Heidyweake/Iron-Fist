@@ -85,6 +85,31 @@ function JUEGO(){
             Puntaje = 0
             document.getElementById("Perdiste_sound").play()
             alert("Lo lamento perdiste")} }
+        
+        if(Tiempo == 0){
+            clearInterval(Restar_Tiempo)
+            clearInterval(Reanudar_trayectoria)
+            clearInterval(Reanudar_trayectoria2)
+
+                      Puntaje = 0
+
+             document.getElementById("Perdiste_sound").play()
+            alert("Lo lamento perdiste")
+}
+
+    function Reiniciar_Juego(){
+    Tiempo = 71
+    Puntaje = 0
+
+    document.getElementById("Tiempo").innerHTML = Tiempo
+    document.getElementById("Puntaje").innerHTML = "0 / 5"
+
+    document.getElementById("Meteiorito").style.left = "-70%"
+    document.getElementById("Meteiorito2").style.left = "-70%"
+
+    clearInterval(Restar_Tiempo)
+    Restar_Tiempo = setInterval(Tiempo_Disminur, 1000)
+}
 
     
         Restar_Tiempo = setInterval(Tiempo_Disminur, 1000)
@@ -128,7 +153,7 @@ function JUEGO(){
                     document.getElementById("Meteiorito2").style.left = "-70%"
                     document.getElementById("Meteiorito2").style.transition = "0s"}
                     
-                Desbloquear_Pantalla  =  setInterval(Ganaste_Pantalla, 1)
+                Desbloquear_Pantalla  =  setInterval(Ganaste_Pantalla, 100)
 
                 Swal.fire({
                     title : 'FELICIDADES POR SUPERAR <br> EL NIVEL <br><br> <img src="IMG/Check.png" width = "120px"><br>',
@@ -320,6 +345,7 @@ function JUEGO(){
                                     document.getElementById("Meteiorito").style.transition = "2.4s"
                                     document.getElementById("Meteiorito2").style.transition = "2.4s"}}
 
+                        clearInterval(Restar_Tiempo)
                         Restar_Tiempo = setInterval(Tiempo_Disminur, 1000)
         
                         document.getElementById("Meteiorito").style.left = Distancia1 + "%"
@@ -374,7 +400,7 @@ function JUEGO(){
 function Mover() {//TRANSICION DE LA PRIMERA SECCION A LA SEGUNDA
     var contenedor = document.getElementById("Seccion_01")
     contenedor.style.top = "-100%"
-    contenedor.style.transition = "2s"
+    contenedor.style.transition = "0.8s"
     function Desaparecer(){
     var contenedor = document.getElementById("Seccion_01")
     var Reglas = document.getElementById("Reglas")
@@ -385,7 +411,7 @@ function Mover() {//TRANSICION DE LA PRIMERA SECCION A LA SEGUNDA
 
 
     }
-    setTimeout(Desaparecer,1090)
+    setTimeout(Desaparecer,850)
 
 }
 
@@ -395,7 +421,7 @@ function Mover_2(){
 
 
     Reglas_Sacar.style.top = "-100%"
-    Reglas_Sacar.style.transition = "1.4s"
+    Reglas_Sacar.style.transition = "0.8s"
 
 
 
@@ -410,13 +436,13 @@ function Mover_2(){
     contenedor_2.style.top = "0%"
 
     imagen.style.left = "2%"
-    imagen.style.transition = "2s"
+    imagen.style.transition = "0.8s"
     mensaje.style.right = "2%"
-    mensaje.style.transition = "2s"
+    mensaje.style.transition = "0.8s"
     titulo.style.left = "2%"
-    titulo.style.transition = "1s"
+    titulo.style.transition = "0.6s"
     }
-    setTimeout(Desaparecer2, 1260)
+    setTimeout(Desaparecer2, 850)
 
 
 
@@ -430,8 +456,8 @@ var Supremo = document.getElementById("Seccion_suprema")
 
 document.getElementById("narracion").pause()
 contenedor_2.style.top = "-100%"
-contenedor_2.style.transition = "1.4s"
-Supremo.style.height = "160vh" //Le aumente para que no tape al contenedor del juego
+contenedor_2.style.transition = "0.8s"
+
 
 
     function Desaparaceer3(){
@@ -447,15 +473,15 @@ Supremo.style.height = "160vh" //Le aumente para que no tape al contenedor del j
         juego.style.top = "0%"
         juego.style.transition = "0s"
         Titulo_jugar.style.left = "0%"
-        Titulo_jugar.style.transition = "0.8s"
+        Titulo_jugar.style.transition = "0.6s"
         Contenedor_juego.style.left = "0%"
-        Contenedor_juego.style.transition = "1.2s"
+        Contenedor_juego.style.transition = "0.8s"
         Cabezara.style.left = "0%"
-        Cabezara.style.transition = "1.2s"
+        Cabezara.style.transition = "0.8s"
 
     }
 
-    setTimeout(Desaparaceer3, 900)
+    setTimeout(Desaparaceer3, 700)
 }
 
 //RELOJ

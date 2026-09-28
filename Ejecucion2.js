@@ -39,12 +39,7 @@ function JUEGOlvl2(){
                 document.getElementById("Puntajelvl2").innerHTML = 0+"&nbsp;/&nbsp;"+34
                 document.getElementById("Fondo_Ciberpunk").pause()
                 document.getElementById("Triunfo").play()
-                document.getElementById("NEXT").addEventListener('click', Habilitar_Siguienten_LVL)
-                function Habilitar_Siguienten_LVL(){
-                document.getElementById("NIVEL_01").style.display = "none"
-                document.getElementById("NIVEL_02").style.display = "none"
-                document.getElementById("NIVEL3").style.display = "block"}
-                            
+              
                 function Ganaste_Pantallalvl2(){
 
                     clearInterval(Reanudar_trayectorialvl2)
@@ -89,6 +84,12 @@ function JUEGOlvl2(){
                                 }
                                      }
 
+                document.getElementById("NEXT").addEventListener('click', Habilitar_Siguienten_LVL)
+                function Habilitar_Siguienten_LVL(){
+                document.getElementById("NIVEL_01").style.display = "none"
+                document.getElementById("NIVEL_02").style.display = "none"
+                document.getElementById("NIVEL3").style.display = "block"}
+                            
 
         //ESTA FUNCION DIRIGE AL PRIMER METIORITO 1 A LA TIERRA 
         function Metiorito_Direccionlvl2(){
