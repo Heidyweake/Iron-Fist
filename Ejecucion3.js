@@ -1,5 +1,5 @@
 
-Tiempolvl3 = 51 //VARIBLE DE INICIO TIEMPO
+Tiempolvl3 = 50 //VARIBLE DE INICIO TIEMPO
 Puntajelvl3 = 0 //VARIABLE DE INICIO PUNTOS
 
 //CONTENEDOR QUE CONTIENE TOO EL JUEGO
@@ -12,7 +12,7 @@ function JUEGOlvl3() {
         Tiempolvl3--;
         document.getElementById("Tiempolvl3").innerHTML = Tiempolvl3
         if (Tiempolvl3 == 0) {
-            Tiempolvl3 = 60
+            Tiempolvl3 = 50
             Puntajelvl3 = 0
             alert("Lo lamento perdiste")
         }
@@ -32,7 +32,7 @@ function JUEGOlvl3() {
         document.getElementById("Puntajelvl3").innerHTML = Puntajelvl3 + " / 4"
         if (Puntajelvl3 == 4) {
             Puntajelvl3 = 0
-            Tiempolvl3 = 60
+            Tiempolvl3 = 50
             function Contactos(){
             Swal.fire({
                 title : 'Felicitaciones por parte del <br> Grupo Omega<br><br><img src="IMG/Logo_Omega.png" width = "120px">',
