@@ -25,30 +25,22 @@ left: 44%; top: 4%; cursor: pointer;}
 .Seccion_01{width: 100%; height: 100vh; overflow: hidden; position: relative; top: 0px; display: flex; flex-direction: column; align-items: center; justify-content: center;}/*ESTE ES EL CONTENEDOR DE
                                                                                             LA SECCION 01*/
 
-.Texto_Principal {
-    font-family: 'Press Start 2P', cursive;
+.Texto_Principal { /*ESTE ES EL TITULO DE IRON FIST*/
+    font-family: 'Press Start 2P', cursive; text-align: center;
+    font-size: 3.8vw;
     text-align: center;
-    font-size: clamp(38px, 5vw, 82px);
-    line-height: 1.2;
-    margin: 0 0 20px;
     position: relative;
-    top: 0;
-    text-shadow:
-        0 0 8px rgba(255,255,255,0.8),
-        0 0 25px rgba(150,70,255,0.8);
+    top: -12%;
 }
 
-.Nombre {
-    font-family: 'Press Start 2P', cursive;
+.Nombre{ /*ESTE ES LA PREGUNTA DEBAJO DEL NOMBRE*/
+    font-family: 'Press Start 2P', cursive; text-align: center;
+    font-size: 5.9vw;
     text-align: center;
-    font-size: clamp(28px, 4vw, 64px);
-    line-height: 1.3;
-    margin: 0;
-    padding: 0 20px;
-    max-width: 1200px;
-    text-shadow:
-        0 0 10px rgba(255,255,255,0.9),
-        0 0 30px rgba(120,60,255,0.8);
+    position: relative;
+    top: 0%;
+    padding-bottom: 0%;
+
 }
 
 .Boton {width: 20vw; height: 4vw; background: rgb(144, 90, 196); /*Este es el boton de JUGAR*/
@@ -60,24 +52,89 @@ margin-left: auto; margin-right: auto; margin: auto; margin-top: -3%; }
 
 
 
-#Reglas{position: relative; width: 100%; top: 120%;}
+#Reglas {
+    position: relative;
+    top: 120%;
+    width: min(1180px, 92%);
+    min-height: 760px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.85fr) minmax(360px, 1.15fr);
+    grid-template-rows: auto repeat(4, minmax(125px, auto));
+    gap: 1.25rem 2rem;
+    background: linear-gradient(135deg, rgba(10, 20, 42, 0.9), rgba(42, 8, 65, 0.72));
+    border: 2px solid #00eaff;
+    box-shadow: 0 0 12px #00eaff, inset 0 0 24px rgba(173, 0, 255, 0.24);
+}
 
-.Titulo_Reglas{font-size: 2.4VW; position: relative; top: -20%; left: 2%; font-family: 'Press Start 2P', cursive;}
+.Titulo_Reglas {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(1.15rem, 2.4vw, 2rem);
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 0 0 8px #00eaff;
+}
 
-.Img_reglas {margin-top: 1%; margin-left: 2%; width: 34%}
+.Img_reglas {
+    grid-column: 1;
+    grid-row: 2 / 6;
+    align-self: stretch;
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: cover;
+    margin: 0;
+    border: 2px solid #ff2bd6;
+    box-shadow: 0 0 12px #ff2bd6;
+}
 
-.Reglas_estilos {background: rgba(248, 248, 248, 0.521); color: black; border: 0.19vw solid black; 
-width: 40%; height: auto; position: absolute;   left: 58% ; font-size: 1.14vw;}
+.Reglas_estilos {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0.75rem 1rem;
+    color: #e9fbff;
+    background: rgba(5, 14, 30, 0.72);
+    border: 1px solid #8b5cff;
+    box-shadow: inset 0 0 12px rgba(0, 234, 255, 0.12), 0 0 8px rgba(139, 92, 255, 0.7);
+    font-size: clamp(0.85rem, 1.05vw, 1rem);
+    line-height: 1.45;
+}
 
-#R1 {top: -4%;}
-#R2 {top: 38%;}
-#R3_4 {top: 75%;}
-.Reglas_estilos h3  {margin-left: 3%; margin-right: 3%; text-align: center;} 
-.Reglas_estilos p  {margin-left: 3%; margin-right: 3%; text-align: center;} 
+#R1 { grid-column: 2; grid-row: 2; }
+#R2 { grid-column: 2; grid-row: 3; }
+#R3 { grid-column: 2; grid-row: 4; }
+#R4 { grid-column: 2; grid-row: 5; }
 
-.Listo {width: 34%; height: 8vh; background: rgb(100, 21, 146); display: flex; 
-align-items: center; justify-content: center; cursor: pointer; position: relative; left: 2%; top: 2vw; font-size: 1.5vw;
-font-family: 'Inconsolata', monospace;}
+.Reglas_estilos h3 {
+    margin: 0 0 0.65rem;
+    color: #00eaff;
+    text-align: center;
+    text-shadow: 0 0 6px #00eaff;
+}
+
+.Reglas_estilos p { margin: 0; text-align: left; }
+
+.Listo {
+    grid-column: 1;
+    grid-row: 6;
+    width: 100%;
+    min-height: 58px;
+    margin: 0;
+    background: linear-gradient(90deg, #661592, #a900ff);
+    border: 1px solid #ff2bd6;
+    box-shadow: 0 0 12px rgba(255, 43, 214, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-family: 'Inconsolata', monospace;
+}
 
 
 
@@ -92,16 +149,20 @@ left: -100%;}
 .Imgane_metiorito{position: absolute; top: 210px; left: -100%; width:600px}/*ESTA ES LA IMAGEN DEL METIORITO CALLENDO A LA TIERRA*/
 
 .Contenedor_Historia{width: 40%;     /*ESTE ES EL CONENTENEDOR DE LA HISTORIA*/
-background: rgba(255, 255, 255, 0.659);
-color: black; padding-top: 2%; padding-right: 2%;
-padding-left: 2%; padding-bottom: 2%; float: right;
+background: rgba(5, 14, 30, 0.78);
+color: #e9fbff; padding: 2rem; box-sizing: border-box;
+border: 1px solid #00eaff;
+box-shadow: 0 0 12px rgba(0, 234, 255, 0.55), inset 0 0 18px rgba(139, 92, 255, 0.18);
+backdrop-filter: blur(6px); line-height: 1.6;
+float: right;
 position: relative; right: 100%; top: 194px;}
 
 .Boton_preparado{width: 70%; height: 6vh; /*ESTE ES EL BOTON DE LA HISTORIA*/
-background: black; display: flex; font-size: 1.2vw;
+background: rgba(15, 12, 35, 0.92); display: flex; font-size: 1.2vw;
 justify-content: center; align-items: center;
-cursor: pointer; color: white; font-family: 'Inconsolata', monospace;
- }
+cursor: pointer; color: #e9fbff; font-family: 'Inconsolata', monospace;
+border: 1px solid #00eaff; box-shadow: 0 0 8px rgba(0, 234, 255, 0.65);
+}
 
 .Contenedor_narracion {width: 9vh; height: 9vh; background: black; color: white; border-radius: 0.5rem;
 display: flex; justify-content: center; align-items: center; cursor: pointer; margin-left: 10%;}
@@ -124,6 +185,10 @@ font-size: 60px;position: relative; top: 0%; left: -110%; padding-bottom: 2%;}
 .Contenedor_Mensaje_Star{height: 60%; width: 100%; left: 0%;  background: transparent;
 position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
 
+.Start .Contenedor_Mensaje_Star {
+    overflow: visible;
+}
+
 /*FONDO DE LA SECCION PRINCIPAL*/
 .Seccion_Juego {width: 100%; height: 160vh; 
     background-size: cover; display: flex;
@@ -144,19 +209,22 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
     align-items: center; position: relative; }
     
     /*Pantalla start del inicio del juego*/
-    .Start {width: 100%; height: 100%; background: rgba(0, 0, 0, 0.582);
+    .Start {width: 100%; height: 100%; background: rgba(4, 10, 22, 0.88);
     position: absolute; top: 0%; z-index: 100000000000; 
     display: flex; align-items: center; 
     justify-content: center; flex-direction: column; 
+    gap: 1.25rem; padding: 2rem; box-sizing: border-box;
     color: white; text-align: center;}
     
     /*Boton de la pantalla start*/
-    .Play {background: purple; color: white;
+    .Play {background: rgba(100, 21, 146, 0.9); color: white;
     width: 18%; height: 15%; display: flex; 
     align-items: center; left: 0px;
     justify-content: center; cursor: pointer;
-    position: relative;  transition: 2s; top: 18%;
-    font-family: 'Press Start 2P', cursive; margin: auto;}
+    position: relative; transition: 2s; top: 23%;
+    margin: 2.25rem auto 0; border: 1px solid #00eaff;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.55);
+    font-family: 'Press Start 2P', cursive; margin: 2.25rem auto 0;}
 
 
     
@@ -164,9 +232,9 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
     .Texo {font-size: 36px;
     left: 0px;  transition: 2s;
     font-family: 'Press Start 2P', cursive;
-    line-height: 70px; margin-top: 0% ;}
+    line-height: 1.7; letter-spacing: 1px; margin: 0 0 1rem;}
 
-    .Pollo{font-family: 'Press Start 2P', cursive; margin-top: 0%;}
+    .Pollo{font-family: 'Press Start 2P', cursive; margin: 1rem 0; line-height: 1.6; letter-spacing: 1px;}
     
     #Contenedor_contador {height: 100%; 
     display: table; position: absolute;}
@@ -181,14 +249,20 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
     height: 100%; background: rgba(0, 0, 0, 0.541);
     text-align: center; z-index: 1000000000; display: none;}
 
-    .GANASTE_PANTALLA {position: absolute; width: 100%; height: 100%; background: rgba(47, 255, 57, 0.63);
-    z-index: 900; top: 0%; display: flex; justify-content: center; align-items: center; flex-direction: column; display: none;}
+    .GANASTE_PANTALLA {position: absolute; width: 100%; height: 100%;
+    background: rgba(15, 12, 35, 0.85); backdrop-filter: blur(6px);
+    border: 2px solid #49ff9a; box-shadow: 0 0 12px #49ff9a, inset 0 0 24px rgba(0, 234, 255, 0.2);
+    z-index: 900; top: 0%; padding: 2.5rem 3rem; box-sizing: border-box;
+    display: flex; justify-content: center; align-items: center; flex-direction: column; display: none;}
 
-    .GANASTE_PANTALLA h1 {font-family: 'Press Start 2P', cursive; color: rgb(10, 90, 16);
-    text-align: center; font-size: 2rem;}
+    .GANASTE_PANTALLA h1 {font-family: 'Press Start 2P', cursive; color: #49ff9a;
+    text-align: center; font-size: clamp(1.3rem, 2.2vw, 2rem); max-width: 85%;
+    line-height: 1.8; letter-spacing: 1px; padding: 0 1rem;
+    text-shadow: 0 0 8px rgba(73, 255, 154, 0.7);}
 
-    .GANASTE_PANTALLA h3 {text-align: center; padding-left: 10%; padding-right: 10%; color: rgb(0, 0, 0);
-    font-family: 'Press Start 2P', cursive;}
+    .GANASTE_PANTALLA h3 {text-align: center; max-width: 78%; padding: 0;
+    color: #e9fbff; font-family: 'Press Start 2P', cursive;
+    line-height: 1.8; letter-spacing: 1px;}
     
     #Sin_Audio {display: none; font-size: 20px; color: white;}
 
@@ -251,26 +325,60 @@ position: absolute; top: 20%; overflow: hidden; transition: 2.3s;}
 .NEXT {width: 15vw; height: 3vw; background: rgb(0, 132, 255); font-size: 0.9vw; display: flex; align-items: center; justify-content: center; cursor: pointer; float: right;
 margin-left: 12%; }
 
-.Contenedor_LVL{display: flex; justify-content: center; align-items: center; width: 100%; position: relative; top: 10%;}
-.Nada {width: 45vw; height: auto; background: rgba(191, 44, 228, 0.274); border: 2px solid purple; color: white; position: relative; left: 6%;  }
-.Nada h2 {padding-left: 3%; padding-right: 3%; font-size: 1.2vw;}
-.Nada p {padding-left: 3%; padding-right: 3%;}
+.Contenedor_LVL {
+    position: relative;
+    top: 10%;
+    width: min(1180px, 92%);
+    margin: 3rem auto 0;
+    display: grid;
+    grid-template-columns: minmax(250px, 300px) minmax(280px, 1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+}
+.Nada {
+    width: auto; height: auto; padding: 1.25rem;
+    background: rgba(15, 12, 35, 0.85);
+    border: 1px solid #00eaff;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.55), inset 0 0 16px rgba(139, 92, 255, 0.18);
+    color: #e9fbff; position: relative; left: 0;
+}
+.Nada h2 {margin: 0 0 1rem; color: #00eaff; font-size: 1.2vw; line-height: 1.5;}
+.Nada p {margin: 0; line-height: 1.6;}
+
+.NEXT {
+    background: rgba(15, 12, 35, 0.92);
+    border: 1px solid #49ff9a;
+    box-shadow: 0 0 9px rgba(73, 255, 154, 0.65);
+    color: #e9fbff;
+}
 
 /*RELOJ*/
-.Fecha {display: flex; width: 280px; margin-bottom: 3%;
-    height: 50px; background: rgba(191, 44, 228, 0.274);
-    justify-content: center; align-items: center;
-    }
+.Fecha {
+    display: flex;
+    width: 100%;
+    min-height: 42px;
+    margin: 0 0 0.75rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    background: rgba(5, 14, 30, 0.78);
+    border: 1px solid #00eaff;
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.7);
+    justify-content: center;
+    align-items: center;
+}
     
-    .Fecha p {font-size: 23px; color: white; font-family: 'Inconsolata', monospace; }
+    .Fecha p {font-size: 0.95rem; color: white; font-family: 'Inconsolata', monospace; }
     
     .Hora {
-        display: flex; width: 280px; height: 100px;
-        background: rgba(191, 44, 228, 0.274);
+        display: flex; width: 100%; min-height: 92px;
+        padding: 0 0.75rem; box-sizing: border-box;
+        background: rgba(5, 14, 30, 0.78);
+        border: 1px solid #ff2bd6;
+        box-shadow: 0 0 12px rgba(255, 43, 214, 0.75);
         align-items: center; justify-content: center;
     }
     
-    .Hora p {font-size: 50px; color: white; font-family: 'Inconsolata', monospace; }
+    .Hora p {font-size: clamp(2rem, 3.2vw, 3rem); color: white; font-family: 'Inconsolata', monospace; }
     
     
     #Caja_ULT {height: 100%; width: 20%; display: flex;
@@ -281,8 +389,9 @@ margin-left: 12%; }
     
     #AMPM {font-size: 25px; color: white; font-family: 'Inconsolata', monospace;  }
     
-    .Contenedor_Reloj { left: 5%; 
-    }
+.Contenedor_Reloj { width: 100%; }
+
+.NEXT { width: auto; margin-left: 0; float: none; }
 /*BLOQUEO DE NIVELES*/
 #NIVEL_01 {display: block;}
 #NIVEL_02 {display: none;}
@@ -348,14 +457,22 @@ margin-left: 12%; }
     height: 100%; background: rgba(0, 0, 0, 0.541);
     text-align: center; z-index: 1000000000; display: none;}
     
-    .GanastePantallaLvL2 {position: absolute; width: 100%; height: 100%; background: rgba(47, 255, 57, 0.63);
-        z-index: 900; top: 0%; display: flex; justify-content: center; align-items: center; flex-direction: column; display: none;}
+    .GanastePantallaLvL2 {position: absolute; width: 100%; height: 100%;
+        background: rgba(15, 12, 35, 0.85); backdrop-filter: blur(6px);
+        border: 2px solid #49ff9a;
+        box-shadow: 0 0 12px #49ff9a, inset 0 0 24px rgba(0, 234, 255, 0.2);
+        z-index: 900; top: 0%; padding: 2.5rem 3rem; box-sizing: border-box;
+        display: flex; justify-content: center; align-items: center;
+        flex-direction: column; display: none;}
     
-    .GanastePantallaLvL2 h1 {font-family: 'Press Start 2P', cursive; color: rgb(10, 90, 16);
-        text-align: center; font-size: 2rem;}
+    .GanastePantallaLvL2 h1 {font-family: 'Press Start 2P', cursive; color: #49ff9a;
+        text-align: center; font-size: clamp(1.3rem, 2.2vw, 2rem); max-width: 85%;
+        line-height: 1.8; letter-spacing: 1px; padding: 0 1rem;
+        text-shadow: 0 0 8px rgba(73, 255, 154, 0.7);}
     
-    .GanastePantallaLvL2 h3 {text-align: center; padding-left: 10%; padding-right: 10%; color: rgb(0, 0, 0);
-        font-family: 'Press Start 2P', cursive;}
+    .GanastePantallaLvL2 h3 {text-align: center; max-width: 78%; padding: 0;
+        color: #e9fbff; font-family: 'Press Start 2P', cursive;
+        line-height: 1.8; letter-spacing: 1px;}
 
 
     /*ESTILOS GENERALES DE LOS METIORITOS*/
@@ -733,3 +850,79 @@ margin-left: 12%; }
         vertical-align: middle;
         font-family: 'Press Start 2P', cursive;
     }
+
+.Texto_Principal,
+.Nombre,
+.Titulo_historia,
+.Titulo-Jugar,
+.Tituloar_Juego_5 {
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+.Puntaje,
+.Puntajelvl2,
+.Puntajelvl3,
+.Tiempo,
+.Tiempolvl2,
+.Tiempolvl3 {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #dce3ea;
+    line-height: 1.3;
+}
+
+.Puntaje h3,
+.Puntajelvl2 h3,
+.Puntajelvl3 h3,
+.Tiempo h3,
+.Tiempolvl2 h3,
+.Tiempolvl3 h3 {
+    margin: 0;
+    color: #aeb8c4;
+    letter-spacing: 0.5px;
+}
+
+.Puntaje span,
+.Puntajelvl2 span,
+.Puntajelvl3 span,
+.Tiempo span,
+.Tiempolvl2 span,
+.Tiempolvl3 span {
+    color: #f2f4f7;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 700px) {
+    #Reglas {
+        top: 120%;
+        width: 94%;
+        min-height: 0;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Img_reglas {
+        order: 2;
+        min-height: 220px;
+        height: 220px;
+    }
+
+    .Reglas_estilos { order: 3; }
+    #R2 { order: 4; }
+    #R3 { order: 5; }
+    #R4 { order: 6; }
+    .Listo { order: 7; }
+
+    .Contenedor_LVL {
+        width: 94%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .Contenedor_Reloj { grid-column: 1; }
+    .Nada, .NEXT { width: 100%; left: 0; margin: 0; }
+}
+
