@@ -22,16 +22,16 @@ function JUEGOlvl2(){
         Restar_Tiempolvl2 = setInterval(Tiempo_Disminurlvl2, 1000)
 
         //AÑADIMOS LA FUNCION AUMENTAR PUNTOS AL PASAR EL CURSOR SOBRE LOS METIORITOS
-        document.getElementById("Meteioritolvl2").addEventListener('pointerenter', Aumentar_Puntoslvl2)
-        document.getElementById("Meteiorito2lvl2").addEventListener('pointerenter', Aumentar_Puntoslvl2)
-        document.getElementById("Meteiorito3lvl2").addEventListener('pointerenter', Aumentar_Puntoslvl2)
+        document.getElementById("Meteioritolvl2").addEventListener('mouseover', Aumentar_Puntoslvl2)
+        document.getElementById("Meteiorito2lvl2").addEventListener('mouseover', Aumentar_Puntoslvl2)
+        document.getElementById("Meteiorito3lvl2").addEventListener('mouseover', Aumentar_Puntoslvl2)
 
 
         //FUNCION QUE UNICAMENTE AUMENTA PUNTOS Y RESETEA LAS VARIABLES AL LLEGAR A CIERTO LIMITE
         function Aumentar_Puntoslvl2(){
             Puntajelvl2++;
-            document.getElementById("Puntajelvl2").innerHTML = Puntajelvl2 + " / 34"
-            if(Puntajelvl2 == 34){
+            document.getElementById("Puntajelvl2").innerHTML = Puntajelvl2 + " / 4"
+            if(Puntajelvl2 == 2){
                 Puntajelvl2 = 0 
                 Tiempolvl2 = 61
 
@@ -261,7 +261,7 @@ function JUEGOlvl2(){
                             document.getElementById("Meteiorito2lvl2").style.top = document.getElementById("Meteiorito2lvl2").offsetTop + "px" 
                             document.getElementById("Meteiorito3lvl2").style.top = document.getElementById("Meteiorito3lvl2").offsetTop + "px" }
 
-                            Pusae_offflvl2 = setInterval(Metiorito_detenerlvl2, 0.01) //LE ASEGNAMOS UNA ID, PARA BORRALO UNA VEZ SE DESPAUSEE
+                            Pusae_offflvl2 = setInterval(Metiorito_detenerlvl2, 10) //LE ASEGNAMOS UNA ID, PARA BORRALO UNA VEZ SE DESPAUSEE
                             Activolvl2 = 2} //CAMBIAMOS EL VALOR PARA QUE AL VOLVER A DARLE CLICK EJECUTE LA CONDICIONAL DE REANUDAR
 
                         else { //LA FUNCION DE REANUDAR
@@ -270,7 +270,7 @@ function JUEGOlvl2(){
                             document.getElementById("Fondo_Ciberpunk").play()
                             function Tiempo_Disminurlvl2(){//VOLVEMOS A CREAR LA FUNCION DE TIEMPO PARA QUE REANUEDE EL CONTEO
                                 Tiempolvl2--;
-                                document.getElementById("Tiempolvl2").innerHTML = Tiempolvl2
+                                
                                 if(Tiempolvl2 == 0){
                                     Tiempolvl2 = 61
                                     Puntajelvl2 = 0
@@ -308,7 +308,7 @@ function JUEGOlvl2(){
                                 document.getElementById("Meteiorito2lvl2").style.left = Distancia2lvl2 + "%"
                                 document.getElementById("Meteiorito2lvl2").style.top = Altura2lvl2 + "px"}
                 
-                                setTimeout(Metiorito_Direccion2lvl2, 1)
+                                setTimeout(Metiorito_Direccion2lvl2, 1000);
                                 Reanudar_trayectoria2lvl2 = setInterval(Metiorito_Direccion2lvl2, 2050)
                 
                             
