@@ -22,9 +22,9 @@ function JUEGOlvl2(){
         Restar_Tiempolvl2 = setInterval(Tiempo_Disminurlvl2, 1000)
 
         //AÑADIMOS LA FUNCION AUMENTAR PUNTOS AL PASAR EL CURSOR SOBRE LOS METIORITOS
-        document.getElementById("Meteioritolvl2").addEventListener('mouseover', Aumentar_Puntoslvl2)
-        document.getElementById("Meteiorito2lvl2").addEventListener('mouseover', Aumentar_Puntoslvl2)
-        document.getElementById("Meteiorito3lvl2").addEventListener('mouseover', Aumentar_Puntoslvl2)
+        document.getElementById("Meteioritolvl2").addEventListener('pointerenter', Aumentar_Puntoslvl2)
+        document.getElementById("Meteiorito2lvl2").addEventListener('pointerenter', Aumentar_Puntoslvl2)
+        document.getElementById("Meteiorito3lvl2").addEventListener('pointerenter', Aumentar_Puntoslvl2)
 
 
         //FUNCION QUE UNICAMENTE AUMENTA PUNTOS Y RESETEA LAS VARIABLES AL LLEGAR A CIERTO LIMITE
